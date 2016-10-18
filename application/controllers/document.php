@@ -33,10 +33,11 @@ class Document extends MY_Controller
             $position_id = $this->session->userdata('login_position_id_array');
             $this->assign('position_id', $position_id);
             return call_user_func_array(array($this, $method), $params);
+
         }
     }
 
-    //$typeid 除了用来判断首次进入页面时需要保留的 资料类别外,-1表示我的收藏,-2表示我的发布
+    //  $typeid 除了用来判断首次进入页面时需要保留的 资料类别外,-1表示我的收藏,-2表示我的发布
     public function list_doc($page=1,$typeid=null) {
         $type = $this->document_model->get_forum_type();
         $data = $this->document_model->list_doc($page,$typeid);

@@ -55,7 +55,7 @@ class Alipay extends CI_Controller {
         }
         //商户订单号，商户网站订单系统中唯一订单号
         $out_trade_no = $res;
-        //订单名称，必填
+        //  订单名称，必填
         //$subject = 'subject';
         $subject = '房猫服务中心账户充值';
         //付款金额，必填
